@@ -1,0 +1,18 @@
+name: example-lisp
+
+type: python-3.6
+
+build:
+  flavor: none
+
+hooks:
+  build: |
+    set -e
+    ./setup-build-env.sh
+    ros --source-registry "$PWD" dump executable -o app
+
+disk: 256
+
+web:
+  commands:
+    start: ./app

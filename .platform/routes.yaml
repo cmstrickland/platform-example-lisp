@@ -1,0 +1,3 @@
+"https://{default}/":
+  type: upstream
+  upstream: example-lisp:http

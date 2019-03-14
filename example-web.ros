@@ -1,0 +1,12 @@
+#!/bin/sh
+#|-*- mode:lisp -*-|#
+#|
+exec ros -Q -- $0 "$@"
+|#
+(progn ;;init forms
+  (ros:ensure-asdf)
+  #+quicklisp(ql:quickload "platform-example-lisp" :silent t))
+(defun main (&rest argv)
+  (declare (ignorable argv))
+  (platform-example-lisp::web))
+;;; vim: set ft=lisp lisp:
