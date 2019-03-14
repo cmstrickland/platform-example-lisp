@@ -1,6 +1,6 @@
 name: example-lisp
 
-type: python-3.6
+type: python:3.6
 
 build:
   flavor: none
