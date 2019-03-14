@@ -9,7 +9,7 @@ hooks:
   build: |
     set -e
     ./setup-build-env.sh
-    ros --source-registry "$PWD" dump executable -o app
+    ros --source-registry "$PWD" dump executable example-web.ros -o app
 
 disk: 256
 
